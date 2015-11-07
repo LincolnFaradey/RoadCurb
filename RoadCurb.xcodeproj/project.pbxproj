@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C2E7E6EE6EF1F81744AEEAC /* libPods-RoadCurb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E47D8E295B666883A1522E31 /* libPods-RoadCurb.a */; };
 		77600B6E1BEE659D00718E38 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77600B6D1BEE659D00718E38 /* AppDelegate.swift */; };
 		77600B701BEE659D00718E38 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77600B6F1BEE659D00718E38 /* ViewController.swift */; };
 		77600B731BEE659D00718E38 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77600B711BEE659D00718E38 /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		19FB622E343B4C0FA0B39BE3 /* Pods-RoadCurb.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RoadCurb.release.xcconfig"; path = "Pods/Target Support Files/Pods-RoadCurb/Pods-RoadCurb.release.xcconfig"; sourceTree = "<group>"; };
 		77600B6A1BEE659D00718E38 /* RoadCurb.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RoadCurb.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77600B6D1BEE659D00718E38 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		77600B6F1BEE659D00718E38 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +49,9 @@
 		77600B891BEE659D00718E38 /* RoadCurbUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RoadCurbUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		77600B8D1BEE659D00718E38 /* RoadCurbUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoadCurbUITests.swift; sourceTree = "<group>"; };
 		77600B8F1BEE659D00718E38 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		77600B9B1BEE779200718E38 /* RoadCurb-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RoadCurb-Bridging-Header.h"; sourceTree = "<group>"; };
+		E47D8E295B666883A1522E31 /* libPods-RoadCurb.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RoadCurb.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F810DFFEA6CA3DCF92F0A5FC /* Pods-RoadCurb.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RoadCurb.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RoadCurb/Pods-RoadCurb.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C2E7E6EE6EF1F81744AEEAC /* libPods-RoadCurb.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +87,9 @@
 				77600B811BEE659D00718E38 /* RoadCurbTests */,
 				77600B8C1BEE659D00718E38 /* RoadCurbUITests */,
 				77600B6B1BEE659D00718E38 /* Products */,
+				83F609F04411ECC3DAAC32F9 /* Pods */,
+				F7FB96383EBB0AB7493F6832 /* Frameworks */,
+				77600B9B1BEE779200718E38 /* RoadCurb-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,6 +134,23 @@
 			path = RoadCurbUITests;
 			sourceTree = "<group>";
 		};
+		83F609F04411ECC3DAAC32F9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F810DFFEA6CA3DCF92F0A5FC /* Pods-RoadCurb.debug.xcconfig */,
+				19FB622E343B4C0FA0B39BE3 /* Pods-RoadCurb.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F7FB96383EBB0AB7493F6832 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E47D8E295B666883A1522E31 /* libPods-RoadCurb.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +158,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 77600B921BEE659D00718E38 /* Build configuration list for PBXNativeTarget "RoadCurb" */;
 			buildPhases = (
+				496F6630C75A709E8DF70145 /* Check Pods Manifest.lock */,
 				77600B661BEE659D00718E38 /* Sources */,
 				77600B671BEE659D00718E38 /* Frameworks */,
 				77600B681BEE659D00718E38 /* Resources */,
+				BC1A75DF31B88B8BD0CCF5FF /* Embed Pods Frameworks */,
+				1AB59C6EBDB2CF9A60C11370 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -250,6 +279,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1AB59C6EBDB2CF9A60C11370 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RoadCurb/Pods-RoadCurb-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		496F6630C75A709E8DF70145 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		BC1A75DF31B88B8BD0CCF5FF /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RoadCurb/Pods-RoadCurb-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		77600B661BEE659D00718E38 /* Sources */ = {
@@ -395,23 +472,32 @@
 		};
 		77600B931BEE659D00718E38 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F810DFFEA6CA3DCF92F0A5FC /* Pods-RoadCurb.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = RoadCurb/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.firebase..RoadCurb;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "RoadCurb-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		77600B941BEE659D00718E38 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 19FB622E343B4C0FA0B39BE3 /* Pods-RoadCurb.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = RoadCurb/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.firebase..RoadCurb;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "RoadCurb-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -482,6 +568,7 @@
 				77600B941BEE659D00718E38 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		77600B951BEE659D00718E38 /* Build configuration list for PBXNativeTarget "RoadCurbTests" */ = {
 			isa = XCConfigurationList;
@@ -490,6 +577,7 @@
 				77600B971BEE659D00718E38 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		77600B981BEE659D00718E38 /* Build configuration list for PBXNativeTarget "RoadCurbUITests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +586,7 @@
 				77600B9A1BEE659D00718E38 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
