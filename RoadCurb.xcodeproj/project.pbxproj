@@ -15,6 +15,7 @@
 		77600B781BEE659D00718E38 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77600B761BEE659D00718E38 /* LaunchScreen.storyboard */; };
 		77600B831BEE659D00718E38 /* RoadCurbTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77600B821BEE659D00718E38 /* RoadCurbTests.swift */; };
 		77600B8E1BEE659D00718E38 /* RoadCurbUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77600B8D1BEE659D00718E38 /* RoadCurbUITests.swift */; };
+		77600BA01BEEA36600718E38 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 77600B9F1BEEA36600718E38 /* .gitignore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		77600B8D1BEE659D00718E38 /* RoadCurbUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoadCurbUITests.swift; sourceTree = "<group>"; };
 		77600B8F1BEE659D00718E38 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		77600B9B1BEE779200718E38 /* RoadCurb-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RoadCurb-Bridging-Header.h"; sourceTree = "<group>"; };
+		77600B9F1BEEA36600718E38 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		E47D8E295B666883A1522E31 /* libPods-RoadCurb.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RoadCurb.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F810DFFEA6CA3DCF92F0A5FC /* Pods-RoadCurb.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RoadCurb.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RoadCurb/Pods-RoadCurb.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -83,6 +85,7 @@
 		77600B611BEE659D00718E38 = {
 			isa = PBXGroup;
 			children = (
+				77600B9F1BEEA36600718E38 /* .gitignore */,
 				77600B6C1BEE659D00718E38 /* RoadCurb */,
 				77600B811BEE659D00718E38 /* RoadCurbTests */,
 				77600B8C1BEE659D00718E38 /* RoadCurbUITests */,
@@ -258,6 +261,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77600BA01BEEA36600718E38 /* .gitignore in Resources */,
 				77600B781BEE659D00718E38 /* LaunchScreen.storyboard in Resources */,
 				77600B751BEE659D00718E38 /* Assets.xcassets in Resources */,
 				77600B731BEE659D00718E38 /* Main.storyboard in Resources */,
