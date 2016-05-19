@@ -1,0 +1,13 @@
+PODS:
+  - CCHMapClusterController (1.6.6)
+  - Firebase (2.4.2)
+
+DEPENDENCIES:
+  - CCHMapClusterController
+  - Firebase (>= 2.4.2)
+
+SPEC CHECKSUMS:
+  CCHMapClusterController: 982db41114b42a575798366371bd9908e0f9ec8b
+  Firebase: 5e898ed5012c81d28ca5fae1113c6b61a172bc6d
+
+COCOAPODS: 0.39.0

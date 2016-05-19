@@ -3,4 +3,6 @@
 //
 
 #import <Firebase/Firebase.h>
-#import <CCHMapClusterController.h>
+#import <CCHMapClusterController/CCHMapClusterController.h>
+#import <CCHMapClusterController/CCHMapClusterControllerDelegate.h>
+#import <CCHMapClusterController/CCHMapClusterAnnotation.h>

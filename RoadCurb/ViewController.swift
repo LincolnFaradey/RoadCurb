@@ -27,11 +27,13 @@ class Obstacle {
     }
 }
 
-class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
+class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate, CCHMapClusterControllerDelegate {
 
     @IBOutlet weak var obstacleBtn: UIButton!
-    var firebase = Firebase(url: "https://roadcurb.firebaseio.com/obstacles")
     @IBOutlet weak var mapView: MKMapView!
+    
+    var firebase = Firebase(url: "https://roadcurb.firebaseio.com/obstacles")
+    
     lazy var clManager: CLLocationManager = {
         let clm = CLLocationManager()
         clm.requestAlwaysAuthorization()
@@ -39,7 +41,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         return clm
     }()
 
-    var obstacles = [Obstacle]()
     var annotations = [MKPointAnnotation]()
     
     lazy var dateFormater: NSDateFormatter = {
@@ -50,6 +51,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     
     lazy var mapClusterController: CCHMapClusterController = {
         let mcc = CCHMapClusterController(mapView: self.mapView)
+        mcc.delegate = self
         return mcc
     }()
     
@@ -58,12 +60,9 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         clManager.delegate = self
         mapView.showsUserLocation = true
         
-        obstacleBtn.layer.borderColor = UIColor.whiteColor().CGColor
-        obstacleBtn.layer.cornerRadius = obstacleBtn.bounds.width / 2
-        obstacleBtn.layer.masksToBounds = true
-        
+        obstacleBtn.roundCornerWith(5.0)
         obstacleBtn.userInteractionEnabled = false
-
+        
         
     }
 
@@ -72,6 +71,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         // Dispose of any resources that can be recreated.
     }
 
+    //MARK: - MKMapViewDelegate
     func mapView(mapView: MKMapView, didUpdateUserLocation userLocation: MKUserLocation) {
         let span = MKCoordinateSpanMake(0.1, 0.1)
         let region = MKCoordinateRegionMake(userLocation.location!.coordinate, span)
@@ -83,7 +83,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
             print("\(snapshot.key) -> \(snapshot.value)")
             for (_, v) in snapshot.value as! NSDictionary {
                 let obstacle = Obstacle(json: v as! [String: AnyObject])
-                self.obstacles.append(obstacle)
+
                 guard (obstacle.coordintes.longitude > region.center.longitude - 1.0) &&
                     (obstacle.coordintes.longitude < region.center.longitude + 1.0) else {
                         continue
@@ -99,6 +99,17 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         }
     }
     
+    
+    //MARK: CCHMapClusterControllerDelegate
+    func mapClusterController(mapClusterController: CCHMapClusterController!, titleForMapClusterAnnotation mapClusterAnnotation: CCHMapClusterAnnotation!) -> String! {
+        return "Test"
+    }
+    
+    func mapClusterController(mapClusterController: CCHMapClusterController!, subtitleForMapClusterAnnotation mapClusterAnnotation: CCHMapClusterAnnotation!) -> String! {
+        return "subtitle"
+    }
+    
+    //MARK: IBActions
     @IBAction func obstacleBtnPressed(sender: UIButton) {
         let coordinates = mapView.userLocation.coordinate
         print("User location \(mapView.userLocation.coordinate)")
@@ -130,7 +141,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
                     "user_name": "User Name"
                     ])
             }
-
         })
         
     }
@@ -139,6 +149,14 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
 extension Firebase {
     func push(obj: AnyObject) {
         self.childByAutoId().setValue(obj)
+    }
+}
+
+extension UIView {
+    func roundCornerWith(radius: CGFloat) {
+        self.layer.borderColor = UIColor.whiteColor().CGColor
+        self.layer.cornerRadius = self.bounds.width / 2
+        self.layer.masksToBounds = true
     }
 }
 
